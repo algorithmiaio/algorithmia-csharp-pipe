@@ -1,0 +1,27 @@
+using System;
+using Newtonsoft.Json;
+using System.IO;
+
+namespace AlgorithmiaPipe
+{
+    public class Config
+    {
+        public string Algoname;
+        public string Username;
+        public string Algopath;
+
+        public Config(string sysPath)
+        {
+            string inputPath = Path.Combine(sysPath, "algorithmia.conf");
+            Console.WriteLine(inputPath);
+            using (StreamReader r = new StreamReader(inputPath))
+            {
+                string json = r.ReadToEnd();
+                dynamic array = JsonConvert.DeserializeObject(json);
+                Algoname = array["algoname"];
+                Username = array["username"];
+                Algopath = sysPath;
+            }
+        }
+    }
+}
