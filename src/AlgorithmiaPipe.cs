@@ -4,14 +4,12 @@ namespace AlgorithmiaPipe
 {
     public static class Pipe
     {
-        public static int Enter()
+        public static int Enter(Type algoType)
         {
             Module algoModule;
-            Config config = new Config(".");
-            Type algotype = Type.GetType(config.Algoname);
             try
             {
-                algoModule = new Module(algotype);
+                algoModule = new Module(algoType);
             }
             catch (Exception e)
             {
