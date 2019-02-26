@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using System.IO;
-namespace Pipe
+namespace AlgorithmiaPipe
 {
     public class Request
     {

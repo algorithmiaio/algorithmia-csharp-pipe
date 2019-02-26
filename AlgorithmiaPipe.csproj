@@ -20,6 +20,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>Algorithmia.Pipe</PackageId>
+    <RootNamespace>pipe</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

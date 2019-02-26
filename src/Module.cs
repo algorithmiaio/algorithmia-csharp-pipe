@@ -2,7 +2,7 @@ using System;
 using Newtonsoft.Json;
 using System.Reflection;
 
-namespace Pipe
+namespace AlgorithmiaPipe
 {
     public class Module
     {

@@ -1,5 +1,5 @@
 using System;
-namespace Pipe
+namespace AlgorithmiaPipe
 {
     public class ExceptionResponse
     {

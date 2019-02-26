@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
-namespace Pipe
+namespace AlgorithmiaPipe
 {
     public class Response
     {

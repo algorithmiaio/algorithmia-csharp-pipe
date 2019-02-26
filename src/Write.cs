@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using Newtonsoft.Json;
-namespace Pipe
+namespace AlgorithmiaPipe
 {    public class Write
     {
         private static string OutputPath = "/tmp/algoout";
