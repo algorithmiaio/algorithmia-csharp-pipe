@@ -11,7 +11,7 @@ namespace AlgorithmiaPipe
         public Request(string input)
         {
             dynamic jobj = JsonConvert.DeserializeObject(input);
-            if (jobj["content_type"] == "json" || jobj["content_type"] == "string" || jobj["content_type"] == "binary")
+            if (jobj["content_type"] == "json" || jobj["content_type"] == "text" || jobj["content_type"] == "binary")
             {
                 Data = jobj["data"].ToString();
                 ContentType = jobj["content_type"].ToString();
