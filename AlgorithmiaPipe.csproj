@@ -1,11 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+<<<<<<< HEAD
     <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
     <AssemblyVersion>1.0.2</AssemblyVersion>
     <FileVersion>1.0.2</FileVersion>
     <PackageVersion>1.0.2</PackageVersion>
     <InformationalVersion>1.0.2</InformationalVersion>
+=======
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+    <PackageVersion>1.0.1</PackageVersion>
+    <InformationalVersion>1.0.1</InformationalVersion>
+>>>>>>> 31a926ec13ba288d2c2fc82595bb9ca0691b59d7
     <Authors>Algorithmia,JamesSutton</Authors>
     <title>.Net Pipe for Algorithmia</title>
     <Company>Algorithmia, Inc.</Company>
