@@ -1,5 +1,5 @@
-# algorithmia-c-sharp-dev
-A package enabling deployment of C# algorithms on Algorithmia.
+# algorithmia-CSharp-Pipe
+A package enabling deployment of C# .NET core algorithms on Algorithmia.
 
 
 # What this is
