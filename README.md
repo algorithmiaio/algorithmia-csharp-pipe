@@ -11,5 +11,5 @@ This package takes an `Algorithmia` algorithm, and wraps it in a language agnost
 * After a response is created, we send it to a fifo pipe at `/tmp/algoout` which is then read by our API servers and returned to the calling user.
 
 ## Where does this live
-If you'd like to add this to your dotnet 2.2+ project, you can find it here:
+If you'd like to add this to your .NET core 2.0+ project, you can find it here:
 https://www.nuget.org/packages/Algorithmia.Pipe/
