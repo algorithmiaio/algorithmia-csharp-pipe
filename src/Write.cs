@@ -10,7 +10,7 @@ namespace AlgorithmiaPipe
         {
             Console.Out.Flush();
             string serialized = JsonConvert.SerializeObject(response);
-            using (StreamWriter w = new StreamWriter(OutputPath))
+            using (StreamWriter w = new StreamWriter(OutputPath, true))
             {
                 w.Write(serialized);
                 w.Write("\n");
