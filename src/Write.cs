@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.IO.Pipes;
 using Newtonsoft.Json;
 namespace AlgorithmiaPipe
 {    public class Write
@@ -8,12 +9,14 @@ namespace AlgorithmiaPipe
 
         public static void WriteJsonToPipe(object response)
         {
+            var client = new NamedPipeClientStream(OutputPath);
             Console.Out.Flush();
             string serialized = JsonConvert.SerializeObject(response);
-            using (StreamWriter w = new StreamWriter(OutputPath, true))
+            using (StreamWriter w = new StreamWriter(client))
             {
                 w.Write(serialized);
                 w.Write("\n");
+                w.Flush();
             }
         }
     }
