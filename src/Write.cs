@@ -13,7 +13,7 @@ namespace AlgorithmiaPipe
             using (StreamWriter w = new StreamWriter(OutputPath))
             {
                 w.Write(serialized);
-                w.WriteLine();
+                w.Write("\n");
             }
         }
     }
