@@ -26,8 +26,12 @@ namespace AlgorithmiaPipe
                 try
                 {
                     line = Console.In.ReadLine();
+                    if (line == null)
+                    {
+                        throw new EndOfStreamException();
+                    }
                 }
-                catch (EndOfStreamException e)
+                catch
                 {
                     break;
                 }
