@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace AlgorithmiaPipe
 {
@@ -19,10 +20,18 @@ namespace AlgorithmiaPipe
             }
             Console.Out.WriteLine("PIPE_INIT_COMPLETE");
             Console.Out.Flush();
-            string readLine;
-            while ((readLine = Console.In.ReadLine()) != null)
+            while (true)
             {
-                Request request = new Request(readLine);
+                string line;
+                try
+                {
+                    line = Console.In.ReadLine();
+                }
+                catch (EndOfStreamException e)
+                {
+                    break;
+                }
+                Request request = new Request(line);
                 object response = null;
                 try
                 {
