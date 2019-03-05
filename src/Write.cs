@@ -9,10 +9,9 @@ namespace AlgorithmiaPipe
 
         public static void WriteJsonToPipe(object response)
         {
-            var client = new NamedPipeClientStream(OutputPath);
-            Console.Out.Flush();
+            var fs = File.OpenWrite(OutputPath);
             string serialized = JsonConvert.SerializeObject(response);
-            using (StreamWriter w = new StreamWriter(client))
+            using (StreamWriter w = new StreamWriter(fs))
             {
                 w.Write(serialized);
                 w.Write("\n");

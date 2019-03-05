@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
-    <AssemblyVersion>1.0.8</AssemblyVersion>
-    <FileVersion>1.0.8</FileVersion>
-    <PackageVersion>1.0.8</PackageVersion>
+    <AssemblyVersion>1.0.9</AssemblyVersion>
+    <FileVersion>1.0.9</FileVersion>
+    <PackageVersion>1.0.9</PackageVersion>
     <InformationalVersion>1.0.8</InformationalVersion>
     <Authors>Algorithmia,JamesSutton</Authors>
     <title>.Net Pipe for Algorithmia</title>
