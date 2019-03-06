@@ -46,7 +46,7 @@ namespace AlgorithmiaPipe
             _algoInputType = paramInfo.ParameterType;
         }
 
-        public object AttemptExecute(Request request)
+        private object[] ValidateInput(Request request)
         {
             object[] algorithmArguments;
             if (request.ContentType == "json")
@@ -80,7 +80,20 @@ namespace AlgorithmiaPipe
                 throw new Exception($"content_type: '{request.ContentType}' is not implemented!");
             }
 
-            return _applyMethod.Invoke(null, algorithmArguments);
+            return algorithmArguments;
+        }
+
+        public object AttemptExecute(Request request)
+        {
+            object[] algorithmArguments = ValidateInput(request);
+            try
+            {
+                return _applyMethod.Invoke(null, algorithmArguments);
+            }
+            catch (TargetInvocationException e)
+            {     
+                throw e.InnerException;
+            }
         }
     }
 }
