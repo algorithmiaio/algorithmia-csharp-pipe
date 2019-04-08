@@ -186,13 +186,13 @@ namespace AlgorithmiaPipe
                 {
                 FaaSExecute();
             }
-            else if (input != null)
+            else if (input == null)
             {
-                DebuggableExecute(input);
+                throw new Exception("'input' must be provided when running in 'debug' mode.");
             }
             else
             {
-                throw new Exception("'input' must be provided when running in 'debug' mode.");
+                DebuggableExecute(input);
             }
             Exit();
         }
