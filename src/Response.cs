@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 namespace AlgorithmiaPipe
@@ -17,10 +19,27 @@ namespace AlgorithmiaPipe
         public readonly object result;
         public readonly MetaData metadata;
 
-        public Response(object res, string content)
+        public Response(dynamic result)
         {
+            string content;
+            object data;
+            if (result is string)
+            {
+                content = "text";
+                data = result;
+            } else if (result is byte[])
+            {
+                content = "binary";
+                data = Convert.ToBase64String((byte[])result);
+            }
+            else
+            {
+                content = "json";
+                data = result;
+            }
+            
             metadata = new MetaData(content);
-            result = res;
+            this.result = data;
         }
     }
 }

@@ -21,5 +21,11 @@ namespace AlgorithmiaPipe
                 throw new Exception("request's content type is invalid.");
             }
         }
+
+        public Request(string input, string contentType)
+        {
+            Data = input;
+            ContentType = contentType;
+        }
     }
 }
