@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using SixLabors.ImageSharp.PixelFormats;
 using Algorithmia;
 using AlgorithmiaPipe;
 //This is an example of an algorithm. You can test it by copy/pasting the following into the web editor:
@@ -39,7 +36,6 @@ namespace AlgorithmiaPipe
             string filename = $"{file_random}.jpg";
             string localFilePath = $"/tmp/{filename}";
             string remoteFilePath = $"data://.my/collection/{filename}";
-            Extras.processImage(input.image_path, localFilePath);
             FileStream stream = File.OpenRead(localFilePath);
             Algorithmia.Client client = (Algorithmia.Client)context["client"];
             client.file($"data://.my/collection/{filename}").put(stream);
@@ -69,21 +65,6 @@ namespace AlgorithmiaPipe
 
     static class Extras
     {
-        public static void processImage(string url, string outputname)
-        {
-            using (WebClient webClient = new WebClient()) 
-            {
-                byte [] data = webClient.DownloadData(url);
-
-                using (MemoryStream mem = new MemoryStream(data))
-                {
-                    Image<Rgba32> image = Image.Load(mem);
-                    image.Mutate(x => x
-                        .Resize(image.Width / 2, image.Height / 2));
-                    image.Save(outputname);
-                }
-            }
-        }
         private static Random random = new Random();
         public static string RandomString(int length)
         {

@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
-    <AssemblyVersion>2.1.0</AssemblyVersion>
-    <FileVersion>2.1.0</FileVersion>
-    <PackageVersion>2.1.0</PackageVersion>
-    <InformationalVersion>2.1.0</InformationalVersion>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
+    <PackageVersion>2.0.0</PackageVersion>
+    <InformationalVersion>2.0.0</InformationalVersion>
     <Authors>Algorithmia,JamesSutton</Authors>
     <title>.Net Pipe for Algorithmia</title>
     <Company>Algorithmia, Inc.</Company>
@@ -19,14 +19,13 @@
     <PackageTags>Algorithmia, Algorithms, Machine Learning, Artificial Service, NLP, Sentiment Analysis, Microservices, Serverless</PackageTags>
     <RepositoryType>Git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>Zeryx.Pipe</PackageId>
-    <RootNamespace>Pipe</RootNamespace>
+    <PackageId>Algorithmia.Pipe</PackageId>
+    <RootNamespace>AlgorithmiaPipe</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Algorithmia.Client" Version="1.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0006" />
   </ItemGroup>
 
 </Project>
